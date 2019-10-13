@@ -85,12 +85,12 @@ class InstaBot():
                         if webdrive.find_element_by_xpath('/html/body/div[3]/div[2]/div/article/header/div[2]/div[1]/div[2]/button').text == 'Follow':
                             
                             # Clicks follow button
-                            #webdrive.find_element_by_xpath('/html/body/div[3]/div[2]/div/article/header/div[2]/div[1]/div[2]/button').click()
+                            webdrive.find_element_by_xpath('/html/body/div[3]/div[2]/div/article/header/div[2]/div[1]/div[2]/button').click()
                             
                             # Appends the username to the new_followed list
-                            #new_followed.append(username)
+                            new_followed.append(username)
                             # To track how many people we follow
-                            #followed += 1
+                            followed += 1
         
                             # Likes the picture
                             button_like = webdrive.find_element_by_xpath('/html/body/div[3]/div[2]/div/article/div[2]/section[1]/span[1]/button')
@@ -102,7 +102,6 @@ class InstaBot():
                             # Gives out comments
                             # Allows us to randomize who we give comments out to
                             comm_prob = randint(1,10)
-                            #print('{}_{}: {}'.format(hashtag, x,comm_prob))
                             
                             # If comm_prob is greater than 7 we will leave a comment
                             # At this rate each photo has a 40% of receiving a comment
@@ -167,11 +166,6 @@ class InstaBot():
                 csv_writer.writerow(row)
                 
             i.close()
-            
-        #updated_user_df.to_csv('{}_users_followed_list.csv'.format(strftime("%Y%m%d-%H%M%S")))
-        #print('Liked {} photos.'.format(likes))
-        #print('Commented {} photos.'.format(comments))
-        #print('Followed {} new people.'.format(followed))
 
 
 def main():
