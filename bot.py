@@ -156,6 +156,8 @@ class InstaBot():
             
             f.close()
             
+        #FIXME
+        # Not writing to the .csv properly
         updated_user_df = prev_user_list
         with open('Instabot_Followed.csv', 'w') as i:
             csv_writer = csv.writer(i)
@@ -172,11 +174,11 @@ def main():
     # Set your path to your driver (chromedriver, etc)
     path = '/usr/lib/chromium/chromedriver'
     # Instagram username
-    username = ""
+    username = "godhatesfigz"
     # Instagram password
-    password = ""
+    password = "123113"
     # List of hashtags to be searched
-    hashtag_list = []
+    hashtag_list = ["metal", "guitar", "computers", "pcmasterrace"]
     
     # Creates a variable with the ability to access the InstaBot class
     # Passes unique information to the InstaBot class
