@@ -2,6 +2,7 @@
 Program that automates liking, commenting and following users on Instagram.
 
 **Requires an Instagram account**
+
 **Can get you banned**
 
 ### Dependencies
